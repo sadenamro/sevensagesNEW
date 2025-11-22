@@ -1,56 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-    
-    /* Global Styles for Tailwind to function properly */
-    body {
-        margin: 0;
-        min-height: 100vh;
-    }
-    ```
 
-4.  **تثبيت التبعيات:** (بما في ذلك `lucide-react` و `tailwindcss` إذا لم يكن مثبتاً بالفعل)
-    ```bash
-    npm install
-    npm install lucide-react tailwindcss postcss autoprefixer
-    ```
-    * (قد تحتاج إلى تهيئة Tailwind عبر `npx tailwindcss init -p` إذا كانت هذه هي المرة الأولى، ولكن Vercel عادةً ما تتعامل مع Vite/Tailwind جيدًا.)
-
-### 2. إعداد Git و Vercel
-
-1.  **تهيئة Git:**
-    ```bash
-    git init
-    git add .
-    git commit -m "Initial commit of Seven Sages App"
-    ```
-
-2.  **ربط المشروع بـ GitHub/GitLab:**
-    * أنشئ مستودعاً جديداً (Repository) على منصة Git المفضلة لديك (GitHub موصى به).
-    * اربط مشروعك المحلي بالمستودع البعيد وادفع الكود.
-
-### 3. النشر عبر Vercel
-
-1.  **عبر لوحة التحكم (Web Dashboard - الأسهل):**
-    * انتقل إلى موقع Vercel وسجل الدخول.
-    * انقر على **"Add New"** ثم **"Project"**.
-    * اختر مستودع Git الذي قمت بإنشائه في الخطوة السابقة.
-    * Vercel ستكتشف تلقائياً أنه مشروع **Vite/React**.
-    * انقر على **"Deploy"**. سيتم بناء المشروع ونشره.
-
-2.  **عبر Vercel CLI (البديل المتقدم):**
-    * قم بتثبيت Vercel CLI عالمياً:
-        ```bash
-        npm install -g vercel
-        ```
-    * سجّل الدخول إلى Vercel عبر الطرفية:
-        ```bash
-        vercel login
-        ```
-    * انشر المشروع:
-        ```bash
-        vercel
-        ```
-    * (سيقوم Vercel بطرح بعض الأسئلة حول الإعدادات، ثم سيبدأ عملية البناء والنشر.)
-
-بمجرد اكتمال النشر، ستحصل على رابط URL لموقعك يعمل بشكل كامل.
+/* Base styles for RTL (Right-to-Left) direction 
+   This ensures compatibility across different environments.
+*/
+body {
+    direction: rtl;
+    margin: 0;
+    min-height: 100vh;
+}
