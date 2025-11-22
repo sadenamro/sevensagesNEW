@@ -1,10 +1,12 @@
-// PostCSS Configuration: Switching to CommonJS format (module.exports and require)
-// هذا التنسيق هو الأكثر موثوقية وغالباً ما يحل مشاكل التوافق في بيئات البناء الخارجية مثل Vercel.
+// يجب استخدام صيغة import ليتوافق مع "type": "module" في package.json
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
-module.exports = {
+/** @type {import('postcss').Config} */
+export default {
+  // يجب تعريف الإضافات هنا كدوال، وليس مجرد مراجع (مطلوب في بعض بيئات Vite/PostCSS)
   plugins: [
-    // استخدام require() لتحميل الإضافات بدلاً من import
-    require('tailwindcss'),
-    require('autoprefixer'),
+    tailwindcss(),
+    autoprefixer(),
   ],
 }
