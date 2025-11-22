@@ -1,7 +1,9 @@
-// PostCSS هو الأداة التي تعالج ملفات CSS وتدمج فيها Tailwind
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
+
 export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
+  plugins: [
+    tailwindcss,
+    autoprefixer,
+  ],
 }
