@@ -1,9 +1,10 @@
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
+// PostCSS Configuration: Switching to CommonJS format (module.exports and require)
+// هذا التنسيق هو الأكثر موثوقية وغالباً ما يحل مشاكل التوافق في بيئات البناء الخارجية مثل Vercel.
 
-export default {
+module.exports = {
   plugins: [
-    tailwindcss,
-    autoprefixer,
+    // استخدام require() لتحميل الإضافات بدلاً من import
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 }
